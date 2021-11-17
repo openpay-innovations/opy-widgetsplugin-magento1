@@ -1,0 +1,7 @@
+<?php $helper = $this->helper('widgets/data'); ?>
+<?php if($helper->isEnabled()): ?>
+	<?php if($helper->isCartWidgetEnabled()): ?>
+		<?php $grandTotal = $this->getQuote()->getGrandTotal() ?>
+		<div class="opycart"><opy-cart amount="<?php echo $grandTotal ?>" logo="<?= $helper->getCartLogo() ?>"></opy-cart></div>
+	<?php endif; ?>
+<?php endif; ?>

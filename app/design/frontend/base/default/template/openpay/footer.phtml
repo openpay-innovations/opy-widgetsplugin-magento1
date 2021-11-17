@@ -1,0 +1,39 @@
+<?php $helper = $this->helper('widgets/data'); ?>
+<?php if($helper->isEnabled()): ?>
+	<?php if($helper->getHeaderWidgetInfobelt() 
+	|| $helper->isCartWidgetEnabled() 
+	|| $helper->isProductWidgetEnabled() 
+	|| $helper->isCatalogWidgetEnabled()): ?>
+		<script type="text/javascript">
+			OpenpayWidgets.Config({
+			    region: '<?= $helper->getRegion() ?>',
+			    currency: '<?= $helper->getCurrency() ?>',
+			    planTiers: [<?= $helper->getTiers() ?>],
+			    minEligibleAmount: <?= $helper->getMinTotal() ?>,
+			    maxEligibleAmount: <?= $helper->getMaxTotal() ?>,
+				type: 'Online'
+				
+			});
+<?php if($helper->getHeaderWidgetSticky()): ?>
+
+window.onscroll = function() {opyinfobelt()};
+<?php endif; ?>
+var optopbar = document.getElementById("openpayinfobelt");
+var optopbarbottom = document.getElementById("openpaybottom");
+ if ((optopbar !== null) && (optopbarbottom !== null) ) {
+var sticky = optopbar.offsetTop;
+}
+
+function opyinfobelt() {
+  if ((window.pageYOffset >= sticky) && (optopbar !== null) && (optopbarbottom !== null) ) {
+    optopbar.classList.add("openpaysticky");
+    optopbarbottom.classList.add("openpaybottom");
+  }
+}
+		</script>
+		<style type="text/css">
+			<?php echo $helper->getWidgetCustomCSS(); ?>
+
+		</style>
+	<?php endif; ?>
+<?php endif; ?>

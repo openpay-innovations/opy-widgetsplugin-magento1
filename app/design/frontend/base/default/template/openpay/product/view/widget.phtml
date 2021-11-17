@@ -1,0 +1,9 @@
+<?php $helper = $this->helper('widgets/data'); ?>
+<?php if($helper->isEnabled()): ?>
+	<?php if($helper->isProductWidgetEnabled()): ?>
+		<?php $_product = $this->getProduct() ?>
+		<div class="product-page-widget">
+			<opy-product-page amount="<?= $_product->getFinalPrice() ?>" product-type="<?= $_product->getTypeId() ?>" logo="<?= $helper->getProductLogo() ?>"></opy-product-page>
+		</div>
+	<?php endif; ?>
+<?php endif; ?>

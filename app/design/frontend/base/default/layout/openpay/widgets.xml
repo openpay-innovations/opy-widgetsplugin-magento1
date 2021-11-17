@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            
+            <action method="addItem" ifconfig="widgets/general/jquery">
+                <type>skin_js</type>
+                <name>js/openpaywidget/jquery-1.10.2.js</name>
+            </action>            
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/openpaywidget/infobelt-widget.css</name>
+            </action>
+            <block type="core/template" name="widgets.header" after="-" template="openpay/head.phtml" />
+        </reference>
+        <reference name="before_body_end">
+            <block type="core/text" name="webcomponents.cdn">
+                <action method="setText" ifconfig="widgets/general/enable">
+                    <text><![CDATA[<script type="text/javascript" src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="openpay.widgets.cdn">
+                <action method="setText" ifconfig="widgets/general/enable">
+                    <text><![CDATA[<script type="text/javascript" src="https://widgets.openpay.com.au/lib/openpay-widgets.min.js"></script>]]></text>
+                </action>
+            </block>
+        	<block type="core/template" name="widget.global" template="openpay/footer.phtml" />
+		</reference>
+    </default>
+    <checkout_cart_index translate="label">
+    	<reference name="content">
+    		<reference name="checkout.cart.methods">
+    			<block type="checkout/cart" name="widget.cart" before="-" template="openpay/checkout/cart/widget.phtml"/>
+    		</reference>
+    	</reference>
+    </checkout_cart_index>
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/openpaywidget/product-widget.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/openpaywidget/product-widget.js</name>
+            </action>
+        </reference>
+        <reference name="alert.urls"> 
+            <block type="catalog/product_view" name="widget.product" before="-" template="openpay/product/view/widget.phtml"/>  
+        </reference>
+    </catalog_product_view>
+    <catalog_category_default>
+        <reference name="product_list">
+            <action method="addPriceBlockType">
+                <type>bundle</type>
+                <block>bundle/catalog_product_price</block>
+                <template>openpay/bundle/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>simple</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>configurable</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>grouped</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+        </reference>
+    </catalog_category_default>
+
+    <catalog_category_view>
+        <reference name="product_list">
+            <action method="addPriceBlockType">
+                <type>bundle</type>
+                <block>bundle/catalog_product_price</block>
+                <template>openpay/bundle/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>simple</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>configurable</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>grouped</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+        </reference>
+    </catalog_category_view>
+
+    <catalog_category_layered>
+        <reference name="product_list">
+            <action method="addPriceBlockType">
+                <type>bundle</type>
+                <block>bundle/catalog_product_price</block>
+                <template>openpay/bundle/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>simple</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>configurable</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>grouped</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+        </reference>
+    </catalog_category_layered>
+
+    <catalogsearch_result_index>
+        <reference name="search_result_list">
+            <action method="addPriceBlockType">
+                <type>bundle</type>
+                <block>bundle/catalog_product_price</block>
+                <template>openpay/bundle/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>simple</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>configurable</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>grouped</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+        </reference>
+    </catalogsearch_result_index>
+
+    <catalogsearch_advanced_result>
+        <reference name="search_result_list">
+            <action method="addPriceBlockType">
+                <type>bundle</type>
+                <block>bundle/catalog_product_price</block>
+                <template>openpay/bundle/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>simple</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>configurable</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+            <action method="addPriceBlockType">
+                <type>grouped</type>
+                <block>catalog/product_price</block>
+                <template>openpay/catalog/product/price.phtml</template>
+            </action>
+        </reference>
+    </catalogsearch_advanced_result>
+    <checkout_onepage_index>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/openpaywidget/checkout-widget.css</name>
+            </action>
+        </reference>
+    </checkout_onepage_index>
+    <onestepcheckout_index_index>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/openpaywidget/checkout-widget.css</name>
+            </action>
+        </reference>
+    </onestepcheckout_index_index>
+</layout>

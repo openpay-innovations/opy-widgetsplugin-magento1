@@ -1,0 +1,43 @@
+<?php $helper = $this->helper('widgets/data'); ?>
+<?php if($helper->isCheckoutWidgetEnabled()): ?>
+	<div class="op-checkout-widget" id="payment_form_openpay" style="display:none;">
+		<div class="widget-inner">
+		    <?php if($monthTxt = $helper->getMonthText()): ?>
+		        <div class="opplantier"><?php echo $monthTxt; ?></div>
+		    <?php endif; ?>
+
+		    <?php if($instalmentTxt = $helper->getInstalmentText()): ?>
+		       <div class="opfortnightly"><?php echo $instalmentTxt; ?></div>
+		    <?php endif; ?>
+
+		    <?php if($redirectTxt = $helper->getRedirectText()): ?>
+		        <div class="opinstruction"><?php echo $redirectTxt; ?></div>
+		    <?php endif; ?>
+		</div>
+	</div>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$('span.learn-more').closest('label').addClass('label');
+		});
+	</script>
+<?php endif; ?>
+<?php if (Mage::helper('core')->isModuleEnabled('Openpay_Payment')) : ?>
+<?php
+$openpay_helper = Mage::helper('openpay_payment');
+$_code = $this->getMethodCode();
+?>
+
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">
+    <div> 
+        <script> 
+            if (!window.isOpenpayJsLoaded) {
+                var element = document.createElement("input");
+                element.type = "hidden";
+                element.value = "1";
+                element.name = "openpayJsLoaded";
+                document.getElementById("payment_form_<?php echo $_code ?>").appendChild(element);
+            }
+        </script>
+    </div>
+</ul>
+<?php endif; ?>

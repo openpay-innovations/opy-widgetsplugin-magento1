@@ -1,0 +1,123 @@
+#dt_method_openpay label.label span.learn-more {
+    position: absolute;
+    text-decoration: underline;
+    right: unset;
+    margin-left: 15px;
+    width: 100%;
+}
+
+#p_method_openpay {
+	z-index: 9;
+}
+
+#dt_method_openpay label.label {
+	position: relative;
+	text-align: left;
+	line-height: 23px;
+
+}
+
+.main-container #dt_method_openpay label.label::after {
+	margin: 0px 95px 0 9px;
+}
+
+.op-checkout-widget * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.op-checkout-widget {
+	width: 340px;
+    position: relative;
+    background: #F5F6F7;
+    border: solid 1px #f6f6f6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    color: #333332;
+    padding: 32px 0px;
+
+}
+
+.op-checkout-widget .widget-inner {
+	
+}
+
+.op-checkout-widget .widget-inner .opplantier {
+    font: 16px/24px Openpay Headline;
+    color: #333332;
+}
+
+.op-checkout-widget .widget-inner .opfortnightly {
+    color: #333332;
+    padding: 7px 0;
+    font: normal 14px/21px canada-type-gibson;
+}
+
+.op-checkout-widget .widget-inner .opinstruction {
+    color: #333332;
+    font: 300 12px/18px canada-type-gibson;
+    padding: 5px 58px 0px 58px;
+}
+
+opy-learn-more-button {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+#dt_method_openpay label.label span.learn-more {
+    position: absolute;
+    right: 0;
+    text-decoration: underline;
+    line-height: 32px;
+    left: 0;
+    top: 25px;
+    margin-left: 119px;
+}
+
+.op-checkout-widget {
+    width: 300px;
+    
+
+}
+
+.op-checkout-widget .widget-inner .opinstruction {
+    padding: 5px 38px 0px 38px;
+}
+
+#dt_method_openpay label::after {
+    margin: 0px 10px 0 0px !important;
+}
+
+
+}
+
+
+@media only screen and (min-width: 401px) and (max-width: 550px){
+ #dt_method_openpay label.label span.learn-more {
+    left: 40px;
+    top: 25px;
+}
+
+#dt_method_openpay label::after {
+    margin: 0px 10px 0 10px !important;
+}
+
+
+}
+.onestepcheckout-index-index .openpay.learn-more {
+    position: absolute;
+    text-decoration: underline;
+    right: unset;
+    margin-left: 15px;
+}
+.onestepcheckout-index-index .openpay.learn-more img {
+    float: left;
+}

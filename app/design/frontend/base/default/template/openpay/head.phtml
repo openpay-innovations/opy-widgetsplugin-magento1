@@ -1,0 +1,18 @@
+<?php $helper = $this->helper('widgets/data'); ?>
+<?php if($helper->isEnabled()): ?>
+	
+
+		<?php if(($helper->getHeaderWidgetInfobelt() == 'homepage') && (Mage::getBlockSingleton('page/html_header')->getIsHomePage())){ ?>
+
+		<div id="openpayinfobelt"><opy-info-belt color="<?= $helper->getHeaderWidgetColor() ?>"></opy-info-belt></div><div id="openpaybottom"></div>
+
+	<?php } elseif($helper->getHeaderWidgetInfobelt() == 'acrossthesite'){ ?>
+
+		<div id="openpayinfobelt"><opy-info-belt color="<?= $helper->getHeaderWidgetColor() ?>"></opy-info-belt></div><div id="openpaybottom"></div>
+
+	<?php } elseif($helper->getHeaderWidgetInfobelt() == 'off'){ ?>
+
+
+<?php } ?>
+
+<?php endif; ?>

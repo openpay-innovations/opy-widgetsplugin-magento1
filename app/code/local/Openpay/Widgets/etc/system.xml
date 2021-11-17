@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<config>
+  <tabs>
+    <openpay_widget translate="label" module="widgets">
+      <label>Openpay Widget</label>
+      <sort_order>600</sort_order>
+    </openpay_widget>
+  </tabs>
+  <sections>
+    <widgets translate="label" module="widgets">
+      <label>Openpay Widget</label>
+      <tab>openpay_widget</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>0</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <groups>
+        <general translate="label"> 
+          <label>General Configuration</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>10</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <expanded>1</expanded>
+          <fields>
+            <enable translate="label">
+              <label>Enable Widget</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </enable>
+            <jquery translate="label">
+              <label>Include jQuery</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </jquery>
+            <region translate="label">
+              <label>Region</label>
+              <frontend_type>select</frontend_type>
+              <source_model>widgets/system_config_source_regions</source_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </region>
+            <tiers translate="label">
+              <label>Plan Tiers</label>
+              <frontend_type>multiselect</frontend_type>
+              <source_model>widgets/system_config_source_tiers</source_model>
+              <sort_order>40</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </tiers>
+            <min translate="label">
+              <label>Minimum Order Value</label>
+              <frontend_type>text</frontend_type>
+              <frontend_model>widgets/min_value_renderer</frontend_model>
+              <sort_order>60</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </min>
+            <max translate="label">
+              <label>Maximum Order Value</label>
+              <frontend_type>text</frontend_type>
+              <frontend_model>widgets/max_value_renderer</frontend_model>
+              <sort_order>70</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </max>
+          </fields>
+        </general>
+        <header translate="label"> 
+          <label>Info Belt Widget</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>20</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <infobelt translate="label">
+              <label>Show Info Belt Widget</label>
+              <frontend_type>select</frontend_type>
+              <source_model>widgets/system_config_source_infobelt</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </infobelt>
+            
+            <color translate="label">
+              <label>Info Belt Widget Color</label>
+              <frontend_type>select</frontend_type>
+              <source_model>widgets/system_config_source_colors</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </color>
+            <Sticky translate="label">
+              <label>Info Belt Widget Sticky</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </Sticky>
+           
+          </fields>
+        </header>
+        <catalog translate="label"> 
+          <label>Product Listing/Catalogue Page Widget</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>30</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <enable translate="label">
+              <label>Show Catalog Page Widget</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </enable>
+            <logo translate="label">
+              <label>Show Openpay Logo on Catalog Widget</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </logo>
+
+            <cataloglogo translate="label">
+              <label>Catalog Page Widget Logo</label>
+              <frontend_type>select</frontend_type>
+              <source_model>widgets/system_config_source_logocatalog</source_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </cataloglogo>
+
+          </fields>
+        </catalog>
+         <product translate="label"> 
+          <label>Product Page Widget</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>40</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <enable translate="label">
+              <label>Show Product Page Widget</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </enable>
+            <productlogo translate="label">
+              <label>Product Page Widget Logo</label>
+              <frontend_type>select</frontend_type>
+              <source_model>widgets/system_config_source_logos</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </productlogo>
+          </fields>
+        </product>
+        <cart translate="label"> 
+          <label>Cart Page Widget</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>50</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <enable translate="label">
+              <label>Show Cart Page Widget</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </enable>
+            <cartlogo translate="label">
+              <label>Cart Page Widget Logo</label>
+              <frontend_type>select</frontend_type>
+              <source_model>widgets/system_config_source_logocart</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </cartlogo>
+          </fields>
+        </cart>
+        <checkout translate="label"> 
+          <label>Checkout Page Widget</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>60</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <enable translate="label">
+              <label>Show Checkout Page Widget</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </enable>
+            <instalment translate="label">
+              <label>Instalment Text</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </instalment>
+            <redirect translate="label">
+              <label>Redirect Text</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <depends>
+                <enable>1</enable>
+              </depends>
+            </redirect>
+          </fields>
+        </checkout>
+           <openpaycustomcss translate="label"> 
+           <label>Openpay Custom CSS</label>
+           <frontend_type>text</frontend_type>
+           <sort_order>70</sort_order>
+           <show_in_default>1</show_in_default>
+           <show_in_website>1</show_in_website>
+           <show_in_store>1</show_in_store>
+           <fields>
+        <addcustomcss translate="label">
+           <label>Widget Custom CSS</label>
+           <frontend_type>textarea</frontend_type>
+           <sort_order>1</sort_order>
+           <show_in_default>1</show_in_default>
+           <show_in_website>1</show_in_website>
+           <show_in_store>1</show_in_store>
+        </addcustomcss>
+       </fields>
+    </openpaycustomcss>
+      </groups>
+    </widgets>
+  </sections>
+</config>
